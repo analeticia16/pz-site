@@ -9,8 +9,14 @@ export default function Home() {
       <nav className="border border-neutral-300">
         <div className="container flex max-w-screen-xl items-center justify-between p-4">
           <a className="font-serif text-4xl font-medium" href="#">
+          <a className="font-serif text-4xl font-medium" href="#">
             Pereira Zerger
           </a>
+          <ul className="flex items-center text-xl font-medium">
+            <li className="m-4 px-4 py-2 hover:bg-gray-300">Serviços</li>
+            <li className="m-4 px-4 py-2 hover:bg-gray-300">Artigos</li>
+            <li className="m-4 px-4 py-2 hover:bg-gray-300">Sobre</li>
+            <li className="m-4 px-4 py-2 hover:bg-gray-300">Contato</li>
           <ul className="flex items-center text-xl font-medium">
             <li className="m-4 px-4 py-2 hover:bg-gray-300">Serviços</li>
             <li className="m-4 px-4 py-2 hover:bg-gray-300">Artigos</li>
