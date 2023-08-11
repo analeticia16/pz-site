@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import ArticlePic from "@/app/images/article-1.jpg";
-import ParceiraSuyanne from "@/app/images/parceira-suyanne-zerger.jpg";
 
 export default function Home() {
   return (
@@ -9,30 +8,21 @@ export default function Home() {
       <nav className="border border-neutral-300">
         <div className="container flex max-w-screen-xl items-center justify-between p-4">
           <a className="font-serif text-4xl font-medium" href="#">
-          <a className="font-serif text-4xl font-medium" href="#">
             Pereira Zerger
           </a>
           <ul className="flex items-center text-xl font-medium">
-            <li className="m-4 px-4 py-2 hover:bg-gray-300">Serviços</li>
-            <li className="m-4 px-4 py-2 hover:bg-gray-300">Artigos</li>
-            <li className="m-4 px-4 py-2 hover:bg-gray-300">Sobre</li>
-            <li className="m-4 px-4 py-2 hover:bg-gray-300">Contato</li>
-          <ul className="flex items-center text-xl font-medium">
-            <li className="m-4 px-4 py-2 hover:bg-gray-300">Serviços</li>
-            <li className="m-4 px-4 py-2 hover:bg-gray-300">Artigos</li>
-            <li className="m-4 px-4 py-2 hover:bg-gray-300">Sobre</li>
-            <li className="m-4 px-4 py-2 hover:bg-gray-300">Contato</li>
+            <li className="m-4 rounded px-4 py-2 hover:bg-gray-300">
+              Serviços
+            </li>
+            <li className="m-4 rounded px-4 py-2 hover:bg-gray-300">Artigos</li>
+            <li className="m-4 rounded px-4 py-2 hover:bg-gray-300">Sobre</li>
+            <li className="m-4 rounded px-4 py-2 hover:bg-gray-300">Contato</li>
           </ul>
         </div>
       </nav>
-      <main className="container max-w-screen-xl py-4">
+      <main className="container max-w-screen-2xl py-4">
+        <section id="servicos" className="py-16"></section>
         <section id="contato" className="py-16">
-          <div>
-            <h2 className="text-center text-3xl"> Conheça nosso time </h2>
-            <p className="text-center text-base leading-relaxed text-slate-600">
-              Alguns dos Nossos Parceiros, Estagiários e Paralegal.
-            </p>
-          </div>
           <div className="mt-16 grid grid-cols-3 grid-rows-2 gap-12">
             {[1, 2].map((n) => (
               <>
@@ -184,26 +174,26 @@ export default function Home() {
             ))}
           </div>
         </section>
+        <hr></hr>
         <section id="artigos" className="py-16">
-          <div>
-            <h2 className="text-center text-3xl"> Artigos </h2>
-            <p className="text-center text-base leading-relaxed text-slate-600">
-              Conheça nosso blog jurídico.
-            </p>
-          </div>
           <div className="mt-16 grid grid-cols-3 gap-12">
             {[1, 2, 3].map((n) => (
               <>
-                <div className="py-4">
+                <div className="py-8">
                   <Image
                     src={ArticlePic}
                     alt="article"
-                    className="h-64 w-full object-cover"
+                    className="h-72 w-full rounded object-cover"
                   />
-                  <span className="mt-3 inline-block rounded bg-gray-100 px-2 py-1 text-xs font-medium tracking-widest text-black">
-                    Direitos Humanos
-                  </span>
-                  <h3 className="mt-2 text-justify text-xl font-medium">
+                  <div className="mt-6">
+                    <span className="mr-4 text-sm font-medium tracking-widest text-slate-500">
+                      11 ago, 2023
+                    </span>
+                    <span className="inline-block rounded bg-gray-50 px-4 py-2 text-sm font-semibold text-stone-600">
+                      Direitos Humanos
+                    </span>
+                  </div>
+                  <h3 className="mt-4 text-justify text-xl font-medium">
                     STF invalida uso da legítima defesa da honra em
                     feminicídios.
                   </h3>
@@ -212,10 +202,10 @@ export default function Home() {
                     os princípios constitucionais da dignidade humana, da
                     proteção à vida e da igualdade de gênero.
                   </p>
-                  <div className="flex justify-end">
+                  <div className="mt-8 flex justify-end">
                     <a
                       href="#"
-                      className="mt-4 flex items-center px-4 py-2 uppercase text-gray-950 hover:bg-gray-300"
+                      className="flex items-center rounded px-4 py-2 uppercase text-gray-950 hover:bg-gray-300"
                     >
                       Leia mais
                       <svg
