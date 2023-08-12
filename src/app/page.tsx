@@ -183,7 +183,7 @@ export default function Home() {
                   <Image
                     src={ArticlePic}
                     alt="article"
-                    className="h-72 w-full rounded object-cover"
+                    className="aspect-[3/2] w-full rounded object-cover"
                   />
                   <div className="mt-6">
                     <span className="mr-4 text-sm font-medium tracking-widest text-slate-500">
