@@ -27,21 +27,17 @@ export default function Home() {
         <hr />
         {Blog()}
       </main>
-      <footer>
-        <div className="container max-w-screen-xl ">
-          <div className="flex bg-gray-800 px-16 py-24">
+      <footer className="bg-gray-800">
+        <div className="container max-w-screen-xl pt-16">
+          <div className="flex">
             <div className="w-1/3">
               <h3 className="font-serif text-4xl font-medium text-gray-100">
                 Logo
               </h3>
               <p className="mt-6 text-justify text-sm text-gray-300">
                 Nós Atendemos toda Região Metropolitana de Campinas/SP e Regiões
-                Próximas, Podemos fazer sua Primeira Consulta por Vídeo
-                Conferência.
-              </p>
-              <p className="mt-2 text-justify text-sm text-gray-300">
-                O Nosso Horário de Atendimento é de Segunda a Sexta, das{" "}
-                <span className="font-bold text-white">9h às 18h</span>.
+                Próximas. O Nosso Horário de Atendimento é de Segunda a Sexta,
+                das <span className="font-bold text-white">9h às 18h</span>.
               </p>
               <ul className="mt-6 flex gap-6 text-sm text-gray-400">
                 <li>
@@ -91,7 +87,35 @@ export default function Home() {
               </ul>
             </div>
             <div className="flex flex-grow flex-wrap pl-20 text-center">
-              <div className="flex w-1/3 flex-col px-4">
+              <div className="flex w-1/4 flex-col px-4">
+                <h2 className="title-font text-sm font-semibold text-white">
+                  TELEFONE
+                </h2>
+                <ul className="mt-4 flex flex-grow flex-col gap-4">
+                  <li>
+                    <a className="text-gray-400 hover:text-white">
+                      19 9.9671-8987
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex w-1/4 flex-col px-4">
+                <h2 className="title-font text-sm font-semibold text-white">
+                  ESCRITÓRIO
+                </h2>
+                <ul className="mt-4 flex flex-grow flex-col gap-4">
+                  <li>
+                    <a className="text-gray-400 hover:text-white">Sobre mim</a>
+                  </li>
+                  <li>
+                    <a className="text-gray-400 hover:text-white">Blog</a>
+                  </li>
+                  <li>
+                    <a className="text-gray-400 hover:text-white">Contato</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex w-1/4 flex-col px-4">
                 <h2 className="title-font text-sm font-semibold text-white">
                   TRABALHO
                 </h2>
@@ -116,7 +140,7 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="flex w-1/3 flex-col px-4">
+              <div className="flex w-1/4 flex-col px-4">
                 <h2 className="title-font text-sm font-semibold text-white">
                   CÍVEL
                 </h2>
@@ -137,23 +161,19 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="flex w-1/3 flex-col px-4">
-                <h2 className="title-font text-sm font-semibold text-white">
-                  Escritório
-                </h2>
-                <ul className="mt-4 flex flex-grow flex-col gap-4">
-                  <li>
-                    <a className="text-gray-400 hover:text-white">Sobre mim</a>
-                  </li>
-                  <li>
-                    <a className="text-gray-400 hover:text-white">Blog</a>
-                  </li>
-                  <li>
-                    <a className="text-gray-400 hover:text-white">Contato</a>
-                  </li>
-                </ul>
-              </div>
             </div>
+          </div>
+          <div className="mt-16 flex h-16 items-center justify-start border-t border-gray-50 border-opacity-20 py-12">
+            <h5 className="text-justify text-sm text-gray-400">
+              Copyrigth@ 2022 Direitos reservados a{" "}
+              <span className="font-semibold text-white">
+                Silvana Pereira Advocacia.{" "}
+              </span>
+              Desenvolvido por{" "}
+              <span className="font-semibold text-white">
+                @Alexandre Landgraf
+              </span>
+            </h5>
           </div>
         </div>
       </footer>
