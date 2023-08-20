@@ -1,46 +1,54 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import ArticlePic from "@/app/images/article-1.jpg";
+import ArticlePic from "@/app/assets/images/article-1.jpg";
 
 export default function Home() {
   return (
     <>
       <nav className="">
-        <div className="container flex max-w-screen-xl items-center justify-between py-8">
-          <a className="font-serif text-4xl font-medium" href="#">
+        <div className="container flex max-w-screen-lg items-center justify-between py-8">
+          <a className="font-serif text-3xl font-medium" href="#">
             Pereira Zerger
           </a>
-          <ul className="flex items-center space-x-4 text-xl font-medium">
-            <li className="rounded px-4 py-2 hover:bg-gray-300">Serviços</li>
-            <li className="rounded px-4 py-2 hover:bg-gray-300">Artigos</li>
-            <li className="rounded px-4 py-2 hover:bg-gray-300">Sobre</li>
-            <li className="rounded px-4 py-2 hover:bg-gray-300">Contato</li>
+          <ul className="flex items-center justify-end space-x-8 text-lg">
+            <li className="rounded px-4 py-2 text-gray-700 hover:bg-gray-300">
+              Serviços
+            </li>
+            <li className="rounded px-4 py-2 text-gray-700 hover:bg-gray-300">
+              Artigos
+            </li>
+            <li className="rounded px-4 py-2 text-gray-700 hover:bg-gray-300">
+              Sobre
+            </li>
+            <li className="rounded bg-gray-900 px-6 py-3 text-center font-medium text-gray-100">
+              <a href="#">Contato</a>
+            </li>
           </ul>
         </div>
       </nav>
-      <main className="container max-w-screen-xl">
-        <section className="container mb-16 flex min-h-[75vh] max-w-screen-xl items-center">
+      <main className="container max-w-screen-lg">
+        <section className="container mb-16 flex min-h-[75vh] max-w-screen-xl grow flex-col items-center justify-center">
           <div className="mx-auto grid grid-cols-12 gap-16">
             <div className="col-span-7">
               <h1 className="mb-8 text-6xl font-medium leading-none tracking-tight text-gray-900">
                 Está procurando uma advogada?
               </h1>
-              <p className="mb-12 pr-16 text-xl font-light text-gray-500">
+              <p className="mb-16 pr-16 text-xl font-light text-gray-500">
                 Muito prazer! Sou a Dra. Silvana e posso ajudar a resolver o seu
                 problema. Vamos conversar?
               </p>
-              <div className="flex items-center">
+              <div className="flex items-center text-lg">
                 <a
                   href="#"
-                  className="mr-3 rounded bg-gray-900 px-5 py-3 text-center text-base font-medium text-gray-100"
+                  className="mr-3 rounded bg-gray-900 px-6 py-3 text-center font-medium text-gray-100"
                 >
-                  Entre em contato
+                  Conheça os serviços
                 </a>
                 <a
                   href="#"
                   className="flex items-center rounded px-4 py-2 font-semibold tracking-tight text-gray-900 hover:bg-gray-300"
                 >
-                  Conheça os serviços
+                  Sobre mim
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -53,6 +61,20 @@ export default function Home() {
               </div>
             </div>
             <div className="col-span-5 flex h-80 w-full items-center rounded bg-neutral-400"></div>
+          </div>
+          <div className="mt-16 flex w-full items-center justify-start">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2c3.309 0 6 2.691 6 6v8c0 3.309-2.691 6-6 6s-6-2.691-6-6v-8c0-3.309 2.691-6 6-6zm0-2c-4.418 0-8 3.582-8 8v8c0 4.418 3.582 8 8 8s8-3.582 8-8v-8c0-4.418-3.582-8-8-8zm0 9c-.829 0-1.5-.672-1.5-1.5s.671-1.5 1.5-1.5 1.5.672 1.5 1.5-.671 1.5-1.5 1.5z" />
+            </svg>
+            <span className="mx-2 text-gray-500">
+              Navegue para conhecer mais.
+            </span>
+            <i className="bx bx-down-arrow-alt"></i>
           </div>
         </section>
         {Servicos()}
