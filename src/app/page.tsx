@@ -5,8 +5,8 @@ import ArticlePic from "@/app/images/article-1.jpg";
 export default function Home() {
   return (
     <>
-      <nav className="border border-neutral-300">
-        <div className="container flex max-w-screen-xl items-center justify-between p-4">
+      <nav className="">
+        <div className="container flex max-w-screen-xl items-center justify-between py-8">
           <a className="font-serif text-4xl font-medium" href="#">
             Pereira Zerger
           </a>
