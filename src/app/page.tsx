@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import ArticlePic from "@/app/assets/images/article-1.jpg";
+import { Button } from "@/app/components";
 
 export default function Home() {
   return (
     <>
-      <nav className="">
-        <div className="container flex max-w-screen-lg items-center justify-between py-8">
+      <nav>
+        <div className="container flex max-w-screen-lg items-center justify-between py-6">
           <a className="font-serif text-3xl font-medium" href="#">
             Pereira Zerger
           </a>
@@ -20,8 +21,10 @@ export default function Home() {
             <li className="rounded px-4 py-2 text-gray-700 hover:bg-gray-300">
               Sobre
             </li>
-            <li className="rounded bg-gray-900 px-6 py-3 text-center font-medium text-gray-100">
-              <a href="#">Contato</a>
+            <li className="py-2">
+              <a href="#">
+                <Button>Contato</Button>
+              </a>
             </li>
           </ul>
         </div>
@@ -38,11 +41,8 @@ export default function Home() {
                 problema. Vamos conversar?
               </p>
               <div className="flex items-center text-lg">
-                <a
-                  href="#"
-                  className="mr-3 rounded bg-gray-900 px-6 py-3 text-center font-medium text-gray-100"
-                >
-                  Conheça os serviços
+                <a href="#" className="">
+                  <Button>Conheça os serviços</Button>
                 </a>
                 <a
                   href="#"
