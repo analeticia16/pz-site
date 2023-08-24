@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import ArticlePic from "@/app/assets/images/article-1.jpg";
-import { Button } from "@/app/components";
+import { Button, Tag } from "@/app/components";
 
 export default function Home() {
   return (
@@ -94,10 +94,8 @@ export default function Home() {
       <>
         <section id="servicos">
           <div className="mx-auto max-w-screen-md py-8 text-center">
-            <p className="mb-4 inline-block rounded bg-gray-50 px-4 py-2 text-sm font-semibold text-stone-600">
-              Áreas de atuação
-            </p>
-            <h2 className="text-6xl">
+            <Tag>Áreas de atuação</Tag>
+            <h2 className="mt-4 text-6xl">
               Conheça nossos principais serviços jurídicos.
             </h2>
             <p className="mt-8 text-base leading-relaxed text-slate-600">
@@ -156,10 +154,8 @@ export default function Home() {
     return (
       <section id="contato">
         <div className="mx-auto max-w-screen-md py-8 text-center">
-          <p className="mb-4 inline-block rounded bg-gray-50 px-4 py-2 text-sm font-semibold text-stone-600">
-            Parceiros
-          </p>
-          <h2 className="text-6xl">
+          <Tag>Parceiros</Tag>
+          <h2 className="mt-4 text-6xl">
             Seja atentido por equipe altamente capacitada.
           </h2>
           <p className="mt-8 text-base leading-relaxed text-slate-600">
@@ -231,10 +227,8 @@ export default function Home() {
       <section id="contato">
         <div className="grid grid-cols-2">
           <div className="col-span-1 py-24">
-            <p className="mb-4 inline-block rounded bg-gray-50 px-4 py-2 text-sm font-semibold text-stone-600">
-              Contato
-            </p>
-            <h3 className="text-6xl">É fácil nos encontrar.</h3>
+            <Tag>Contato</Tag>
+            <h3 className="mt-4 text-6xl">É fácil nos encontrar.</h3>
             <p className="mt-8 text-lg font-light text-gray-600">
               Faça seu cadastro no formulário e mande um resumo do seu caso, que
               minha equipe entrará em contato.
@@ -389,13 +383,11 @@ export default function Home() {
                   alt="article"
                   className="aspect-[3/2] w-full rounded object-cover"
                 />
-                <div className="mt-6">
-                  <span className="mr-4 text-sm font-medium tracking-widest text-slate-500">
+                <div className="mt-6 flex items-center justify-between">
+                  <span className="mr-4 text-sm font-normal text-slate-600">
                     11 ago, 2023
                   </span>
-                  <span className="inline-block rounded bg-gray-50 px-4 py-2 text-sm font-semibold text-stone-600">
-                    Direitos Humanos
-                  </span>
+                  <Tag>Direitos Humanos</Tag>
                 </div>
                 <h3 className="mt-4 text-justify text-xl font-medium">
                   STF invalida uso da legítima defesa da honra em feminicídios.
