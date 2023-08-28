@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import ArticlePic from "@/assets/images/article-1.jpg";
-import { Button, Tag } from "@/app/components";
+import { Button, Tag, ContactForm } from "@/app/components";
 
 export default function Home() {
   return (
@@ -293,68 +293,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="col-span-1 py-32 pl-16">
-            <form>
-              <div className="mb-6 flex items-center gap-4">
-                <div className="w-1/2">
-                  <label className="mb-2 block text-sm font-semibold text-gray-900">
-                    Nome: *
-                  </label>
-                  <input
-                    type="text"
-                    className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900"
-                    placeholder="Digite seu nome"
-                    required
-                  />
-                </div>
-                <div className="w-1/2">
-                  <label className="mb-2 block text-sm font-semibold text-gray-900">
-                    Sobrenome: *
-                  </label>
-                  <input
-                    type="text"
-                    className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900"
-                    placeholder="Digite seu sobrenome"
-                    required
-                  />
-                </div>
-              </div>
-              <div className="mb-6 flex items-center">
-                <div className="w-full">
-                  <label className="mb-2 block text-sm font-semibold text-gray-900">
-                    Telefone: *
-                  </label>
-                  <input
-                    type="text"
-                    className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900"
-                    placeholder="Digite seu telefone"
-                    required
-                  />
-                </div>
-              </div>
-              <div className="mb-6 flex items-center">
-                <div className="w-full">
-                  <label className="mb-2 block text-sm font-semibold text-gray-900">
-                    Mensagem: *
-                  </label>
-                  <textarea
-                    rows={6}
-                    className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900"
-                    placeholder="Digite sua mensagem"
-                    required
-                  ></textarea>
-                </div>
-              </div>
-              <div className="flex items-center justify-end">
-                <button
-                  type="submit"
-                  className="w-auto rounded bg-gray-700 px-5 py-2.5 text-center text-sm font-medium text-white"
-                >
-                  Enviar Mensagem
-                </button>
-              </div>
-            </form>
-          </div>
+          <ContactForm />
         </div>
       </section>
     );
@@ -563,7 +502,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-16 flex h-16 items-center justify-start border-t border-gray-50 border-opacity-20 py-12">
-            <h5 className="text-justify text-sm text-gray-400">
+            <h3 className="text-justify text-sm text-gray-400">
               Copyrigth@ 2022 Direitos reservados a{" "}
               <span className="font-semibold text-white">
                 Silvana Pereira Advocacia.{" "}
@@ -572,7 +511,7 @@ export default function Home() {
               <span className="font-semibold text-white">
                 @Alexandre Landgraf
               </span>
-            </h5>
+            </h3>
           </div>
         </div>
       </footer>
