@@ -1,4 +1,4 @@
-import { cn } from "@/app/util/cn";
+import { cn } from "@/util/cn";
 
 type TagProps = React.LabelHTMLAttributes<HTMLLabelElement>;
 export default function Tag({ className, children, ...props }: TagProps) {

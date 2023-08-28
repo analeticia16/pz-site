@@ -1,13 +1,13 @@
 # Requisitos Técnicos
 
 Desenvolver um software com framework web que utilize:
-- banco de dados,
+- banco de dados [Ok]
 - inclua script web (Javascript)
-- nuvem
+- nuvem [Ok]
 - uso de API
 - acessibilidade
-- controle de versão
-- e testes. 
+- controle de versão [Ok]
+- e testes.  [Ok]
 
 ```bash
 npm run dev

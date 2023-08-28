@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import ArticlePic from "@/app/assets/images/article-1.jpg";
+import ArticlePic from "@/assets/images/article-1.jpg";
 import { Button, Tag } from "@/app/components";
 
 export default function Home() {
