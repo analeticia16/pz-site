@@ -10,6 +10,7 @@ Desenvolver um software com framework web que utilize:
 - e testes.  [Ok]
 
 ```bash
+npm install
 npm run dev
 # or
 yarn dev
