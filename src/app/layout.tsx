@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Button } from "./components";
@@ -16,10 +17,14 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="flex min-h-screen flex-col justify-between">
-        <nav>
-          <div className="container flex max-w-screen-lg items-center justify-between py-6">
-            <Link href="/" className="font-serif text-3xl font-medium">
-              Pereira Zerger
+        <nav className="sticky top-0 z-50 border-b border-gray-200 bg-background">
+          <div className="container flex max-w-screen-xl items-center justify-between py-6">
+            <Link href="/">
+              <img
+                src="/images/sp-sem-bg.png"
+                alt="logo silvava"
+                className="h-auto w-24"
+              ></img>
             </Link>
             <ul className="flex items-center justify-end space-x-8 text-lg">
               <li className="rounded px-4 py-2 text-gray-700 hover:bg-gray-300">
@@ -42,9 +47,9 @@ export default function RootLayout({
             </ul>
           </div>
         </nav>
-        <main className="container max-w-screen-lg grow">{children}</main>
-        <footer className="bg-gray-800">
-          <div className="container max-w-screen-xl pt-16">
+        <main className="container max-w-screen-xl grow">{children}</main>
+        <footer className="bg-secondary">
+          <div className="container max-w-screen-xl pt-12">
             <div className="flex">
               <div className="w-1/3">
                 <h3 className="font-serif text-4xl font-medium text-gray-100">

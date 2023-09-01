@@ -1,15 +1,16 @@
 :root{
---text:  #020a0e;
---background: #f6fbfe;
---primary: #9f0307;
---secondary: #cacaca;
---accent: #726521;
+  --background: #f6fbfe;
+  --primary: #6A0404;
+  --secondary: #3a444e;
+  --accent: #e5c352;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.fundo-vermelho {
-  background-color: var(--primary);
+@layer base {
+  body {
+    background-color: var(--background);
+  }
 }

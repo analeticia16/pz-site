@@ -10,6 +10,20 @@ module.exports = {
       container: {
         center: true,
       },
+      colors: {
+        background: {
+          DEFAULT: "var(--background)"
+        },
+        primary:{
+          DEFAULT: "var(--primary)"
+        },
+        secondary: {
+          DEFAULT: "var(--secondary)"
+        },
+        accent: {
+          DEFAULT: "var(--accent)"
+        }
+      }
     },
   },
   plugins: [],

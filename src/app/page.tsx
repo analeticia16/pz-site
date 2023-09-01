@@ -9,10 +9,10 @@ export default function Home() {
       <section className="container mb-16 flex min-h-[75vh] max-w-screen-xl grow flex-col items-center justify-center">
         <div className="mx-auto grid grid-cols-12 gap-16">
           <div className="col-span-7">
-            <h1 className="mb-8 text-6xl font-medium leading-none tracking-tight text-gray-900">
+            <h1 className="mb-12 text-6xl font-medium leading-none tracking-tight text-gray-900">
               Está procurando uma advogada?
             </h1>
-            <p className="mb-16 pr-16 text-xl font-light text-gray-500">
+            <p className="mb-16 pr-16 text-2xl font-normal text-gray-600">
               Muito prazer! Sou a Dra. Silvana e posso ajudar a resolver o seu
               problema. Vamos conversar?
             </p>
@@ -22,7 +22,7 @@ export default function Home() {
               </a>
               <a
                 href="#"
-                className="flex items-center rounded px-4 py-2 font-semibold tracking-tight text-gray-900 hover:bg-gray-300"
+                className="ml-2 flex items-center rounded px-4 py-2 font-semibold tracking-tight text-gray-900 hover:bg-gray-300"
               >
                 Sobre mim
                 <svg
@@ -36,7 +36,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="col-span-5 flex h-80 w-full items-center rounded bg-neutral-400"></div>
+          <div className="col-span-5 flex h-80 w-full items-center rounded bg-secondary"></div>
         </div>
         <div className="mt-16 flex w-full items-center justify-start">
           <svg
@@ -67,40 +67,46 @@ export default function Home() {
     return (
       <>
         <section id="servicos">
-          <div className="mx-auto max-w-screen-md py-8 text-center">
-            <Tag>Áreas de atuação</Tag>
-            <h2 className="mt-4 text-6xl">
-              Conheça nossos principais serviços jurídicos.
-            </h2>
-            <p className="mt-8 text-base leading-relaxed text-slate-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              mollis sapien eu egestas rhoncus. Maecenas dignissim, elit et
-              mattis gravida, lacus leo pulvinar nisl, id vulputate metus dolor
-              at nulla.
-            </p>
+          <div className="mx-aut grid grid-cols-2 rounded-lg py-12">
+            <div className="col-span-1">
+              <Tag>Áreas de atuação</Tag>
+              <h2 className="mt-4 text-6xl text-gray-900">
+                Conheça nossos principais serviços jurídicos.
+              </h2>
+            </div>
+            <div className="col-span-1 flex items-center justify-center">
+              <p className="mt-8 text-base italic leading-relaxed text-gray-500">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                mollis sapien eu egestas rhoncus. Maecenas dignissim, elit et
+                mattis gravida, lacus leo pulvinar nisl, id vulputate metus
+                dolor at nulla.
+              </p>
+            </div>
           </div>
-          <div className="mx-auto mt-8 max-w-screen-lg">
+          <div className="mx-auto mt-8">
             <div className="grid grid-cols-2 grid-rows-4 gap-4">
               {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
                 <>
-                  <div className="col-span-1 border px-6 pb-4 pt-6 md:flex">
+                  <div className="col-span-1 rounded border border-gray-300 px-6 pb-4 pt-6 md:flex">
                     <div className="flex justify-center pt-1 md:w-1/3">
-                      <div className="flex h-16 w-16 items-center justify-center rounded bg-gray-700"></div>
+                      <div className="flex h-16 w-16 items-center justify-center rounded bg-primary"></div>
                     </div>
                     <div className="pl-6 md:flex-grow">
-                      <h3 className="text-xl font-semibold text-black">
-                        Nome do serviço
-                      </h3>
-                      <p className="mt-2 text-justify text-base leading-relaxed text-slate-600">
+                      <div className="border-b border-b-accent pb-2">
+                        <h3 className="text-xl font-semibold text-secondary">
+                          Nome do serviço
+                        </h3>
+                      </div>
+                      <p className="mt-2 text-justify text-base leading-relaxed text-gray-700">
                         Em decisão unânime, STF entendeu que o uso da tese
                         contraria os princípios constitucionais. Em decisão
                         unânime, STF entendeu que o uso da tese contraria os
                         princípios constitucionais.
                       </p>
-                      <div className="mt-4 flex justify-end">
+                      <div className="mt-6 flex justify-end">
                         <a
                           href="#"
-                          className="flex items-center rounded px-4 py-2 uppercase text-gray-950 hover:bg-gray-300"
+                          className="flex items-center rounded border-b-accent px-4 py-2 uppercase hover:bg-secondary hover:text-gray-100"
                         >
                           Leia mais
                           <svg
@@ -127,12 +133,12 @@ export default function Home() {
   function Parceiros() {
     return (
       <section id="contato">
-        <div className="mx-auto max-w-screen-md py-8 text-center">
+        <div className="mx-auto mt-16 max-w-screen-md py-12 text-center">
           <Tag>Parceiros</Tag>
-          <h2 className="mt-4 text-6xl">
+          <h2 className="mt-4 text-6xl text-gray-900">
             Seja atentido por equipe altamente capacitada.
           </h2>
-          <p className="mt-8 text-base leading-relaxed text-slate-600">
+          <p className="mt-8 text-base italic leading-relaxed text-gray-500">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
             mollis sapien eu egestas rhoncus. Maecenas dignissim, elit et mattis
             gravida, lacus leo pulvinar nisl, id vulputate metus dolor at nulla.
@@ -141,20 +147,20 @@ export default function Home() {
         <div className="mt-16 grid grid-cols-3 grid-rows-2 gap-12">
           {[1, 2, 3, 4, 5, 6].map((n) => (
             <>
-              <div className="rounded bg-slate-50 py-12">
+              <div className="rounded bg-gradient-to-b from-gray-100 py-12">
                 <img
                   src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                   alt="parceira"
                   className="mx-auto h-64 w-64 rounded-full object-cover"
                 />
-                <h3 className="mt-6 text-center text-lg font-semibold text-black">
+                <h3 className="mt-6 text-center text-lg font-semibold text-gray-900">
                   Nome Sobrenome
                 </h3>
                 <p className="text-center text-base leading-relaxed text-slate-600">
                   Função escritório
                 </p>
                 <ul className="mt-6 flex items-center justify-center">
-                  <li className="px-2 text-slate-400">
+                  <li className="px-2 text-primary opacity-95">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -165,7 +171,7 @@ export default function Home() {
                       <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                     </svg>
                   </li>
-                  <li className="px-2 text-slate-400">
+                  <li className="px-2 text-primary opacity-80">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -176,7 +182,7 @@ export default function Home() {
                       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                     </svg>
                   </li>
-                  <li className="px-2 text-slate-400">
+                  <li className="px-2 text-primary opacity-80">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -319,9 +325,6 @@ export default function Home() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
                       className="ml-2 h-6 w-6"
                       viewBox="0 0 24 24"
                     >
