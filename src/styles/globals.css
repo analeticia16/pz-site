@@ -10,7 +10,5 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    background-color: var(--background);
-  }
+  
 }

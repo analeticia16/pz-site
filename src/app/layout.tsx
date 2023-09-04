@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="flex min-h-screen flex-col justify-between">
-        <nav className="sticky top-0 z-50 border-b border-gray-200 bg-background">
+        <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white">
           <div className="container flex max-w-screen-xl items-center justify-between py-6">
             <Link href="/">
               <img
@@ -48,13 +48,17 @@ export default function RootLayout({
           </div>
         </nav>
         <main className="container max-w-screen-xl grow">{children}</main>
-        <footer className="bg-secondary">
-          <div className="container max-w-screen-xl pt-12">
+        <footer className="mt-16">
+          <div className="container max-w-screen-xl rounded-lg bg-gray-900 px-16 pt-24">
             <div className="flex">
               <div className="w-1/3">
-                <h3 className="font-serif text-4xl font-medium text-gray-100">
-                  Logo
-                </h3>
+                <Link href="/">
+                  <img
+                    src="/images/sp-sem-bg.png"
+                    alt="logo silvava"
+                    className="h-auto w-16"
+                  ></img>
+                </Link>
                 <p className="mt-6 text-justify text-sm text-gray-300">
                   Nós Atendemos toda Região Metropolitana de Campinas/SP e
                   Regiões Próximas. O Nosso Horário de Atendimento é de Segunda

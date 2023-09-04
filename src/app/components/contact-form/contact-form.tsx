@@ -65,13 +65,13 @@ export default function ContactForm() {
           <form onSubmit={handleSubmit}>
             <div className="mb-6 flex items-center gap-4">
               <div className="w-1/2">
-                <label className="mb-2 block text-sm font-semibold text-gray-900">
+                <label className="mb-2 block text-sm font-semibold text-gray-200">
                   Nome: *
                 </label>
                 <input
                   type="text"
                   name="nome"
-                  className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900"
+                  className="block w-full rounded border border-gray-200 bg-gray-300 p-2.5 text-sm text-gray-900 placeholder:text-gray-700"
                   placeholder="Digite seu nome"
                   minLength={3}
                   maxLength={50}
@@ -80,13 +80,13 @@ export default function ContactForm() {
                 />
               </div>
               <div className="w-1/2">
-                <label className="mb-2 block text-sm font-semibold text-gray-900">
+                <label className="mb-2 block text-sm font-semibold text-gray-200">
                   Sobrenome: *
                 </label>
                 <input
                   type="text"
                   name="sobrenome"
-                  className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900"
+                  className="block w-full rounded border border-gray-200 bg-gray-300 p-2.5 text-sm text-gray-900 placeholder:text-gray-700"
                   placeholder="Digite seu sobrenome"
                   minLength={3}
                   maxLength={50}
@@ -97,13 +97,13 @@ export default function ContactForm() {
             </div>
             <div className="mb-6 flex items-center">
               <div className="w-full">
-                <label className="mb-2 block text-sm font-semibold text-gray-900">
+                <label className="mb-2 block text-sm font-semibold text-gray-200">
                   Telefone: *
                 </label>
                 <input
                   type="number"
                   name="telefone"
-                  className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900"
+                  className="block w-full rounded border border-gray-200 bg-gray-300 p-2.5 text-sm text-gray-900 placeholder:text-gray-700"
                   placeholder="Digite seu telefone com o DDD "
                   minLength={8}
                   maxLength={50}
@@ -114,13 +114,13 @@ export default function ContactForm() {
             </div>
             <div className="mb-6 flex items-center">
               <div className="w-full">
-                <label className="mb-2 block text-sm font-semibold text-gray-900">
+                <label className="mb-2 block text-sm font-semibold text-gray-200">
                   Mensagem: *
                 </label>
                 <textarea
                   name="mensagem"
                   rows={6}
-                  className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900"
+                  className="block w-full rounded border border-gray-200 bg-gray-300 p-2.5 text-sm text-gray-900 placeholder:text-gray-700"
                   placeholder="Digite sua mensagem"
                   minLength={3}
                   maxLength={300}
@@ -142,7 +142,7 @@ export default function ContactForm() {
             <div className="flex items-center justify-end">
               <button
                 type="submit"
-                className="w-auto rounded bg-gray-700 px-5 py-2.5 text-center text-sm font-medium text-white disabled:bg-gray-400"
+                className="w-full rounded bg-primary px-5 py-2.5 text-center text-sm font-medium text-white disabled:bg-gray-400"
                 disabled={loading}
               >
                 {loading ? "Enviando..." : "Enviar Mensagem"}
