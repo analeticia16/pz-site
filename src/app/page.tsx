@@ -9,12 +9,16 @@ export default function Home() {
       <section className="container mb-16 flex min-h-[75vh] max-w-screen-xl grow flex-col items-center justify-center">
         <div className="mx-auto grid grid-cols-12 gap-16">
           <div className="col-span-7">
-            <h1 className="mb-12 text-6xl font-medium leading-none tracking-tight text-gray-900">
+            <span className="rounded-lg bg-primary-50 px-3 py-1 text-xs font-semibold text-primary-900">
+              Atendendo em Campinas e Região!
+            </span>
+            <h1 className="leading mb-12 mt-4 text-5xl font-bold tracking-tight text-gray-900">
               Está procurando uma advogada?
             </h1>
-            <p className="mb-16 pr-16 text-2xl font-normal text-gray-600">
-              Muito prazer! Sou a Dra. Silvana e posso ajudar a resolver o seu
-              problema. Vamos conversar?
+            <p className="mb-16 pr-16 text-xl font-normal text-gray-800">
+              Muito prazer! Sou a{" "}
+              <span className="font-bold text-gray-900">Dra. Silvana</span> e
+              posso ajudar a resolver o seu problema. Vamos conversar?
             </p>
             <div className="flex items-center text-lg">
               <a href="#" className="">
@@ -22,7 +26,7 @@ export default function Home() {
               </a>
               <a
                 href="#"
-                className="ml-2 flex items-center rounded px-4 py-2 font-semibold tracking-tight text-gray-900 hover:bg-gray-300"
+                className="ml-2 flex items-center rounded px-4 py-3 font-semibold tracking-tight text-gray-900 hover:bg-gray-300"
               >
                 Sobre mim
                 <svg
@@ -147,7 +151,7 @@ export default function Home() {
         <div className="mt-8 grid grid-cols-3 grid-rows-2 gap-12">
           {[1, 2, 3, 4, 5, 6].map((n) => (
             <>
-              <div className="rounded bg-gradient-to-b from-gray-100 py-12">
+              <div className="rounded bg-secondary-50 py-12">
                 <img
                   src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                   alt="parceira"
@@ -204,9 +208,9 @@ export default function Home() {
 
   function Contato() {
     return (
-      <section id="contato" className="mt-12">
-        <div className="grid grid-cols-2 rounded-lg bg-gray-700 px-8">
-          <div className="col-span-1 py-24">
+      <section id="contato" className="mt-24">
+        <div className="grid grid-cols-2 rounded bg-secondary-700 px-12">
+          <div className="col-span-1 py-16">
             <Tag>Contato</Tag>
             <h3 className="mt-4 text-6xl text-gray-100">
               É fácil nos encontrar.
@@ -284,27 +288,22 @@ export default function Home() {
 
   function Blog() {
     return (
-      <section id="artigos">
-        <div className="mx-auto grid max-w-screen-xl grid-cols-2 rounded-lg py-8">
-          <div className="col-span-1">
-            <Tag>Informação</Tag>
-            <h2 className="mt-4 text-6xl text-gray-900">
-              Leia nossas últimas publicações.
-            </h2>
-          </div>
-          <div className="col-span-1 flex items-center justify-center">
-            <p className="mt-8 text-base leading-relaxed text-slate-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              mollis sapien eu egestas rhoncus. Maecenas dignissim, elit et
-              mattis gravida, lacus leo pulvinar nisl, id vulputate metus dolor
-              at nulla.
-            </p>
-          </div>
+      <section id="artigos" className="mt-16">
+        <div className="mx-auto py-16 text-center">
+          <Tag>Informação</Tag>
+          <h2 className="mt-4 text-6xl text-gray-900">
+            Leia nossas últimas publicações.
+          </h2>
+          <p className="mt-8 text-base leading-relaxed text-slate-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            mollis sapien eu egestas rhoncus. Maecenas dignissim, elit et mattis
+            gravida, lacus leo pulvinar nisl, id vulputate metus dolor at nulla.
+          </p>
         </div>
-        <div className="grid grid-cols-3 gap-12">
+        <div className="grid grid-cols-3 gap-10">
           {[1, 2, 3, 4, 5, 6].map((n) => (
             <>
-              <div className="py-6">
+              <div>
                 <Image
                   src={ArticlePic}
                   alt="article"

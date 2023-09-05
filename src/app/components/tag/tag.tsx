@@ -5,7 +5,7 @@ export default function Tag({ className, children, ...props }: TagProps) {
   return (
     <span
       className={cn(
-        "rounded-xl bg-accent px-3 py-1 text-xs font-normal tracking-widest text-gray-700",
+        "rounded-xl bg-accent-200 px-3 py-1 text-xs font-semibold tracking-widest text-accent-950",
         `${className}`,
       )}
       {...props}
