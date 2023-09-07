@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
-import ArticlePic from "@/assets/images/article-1.jpg";
 import { Button, Tag, ContactForm } from "@/app/components";
+import servicos from "@/util/data";
 
 export default function Home() {
   return (
@@ -43,14 +42,7 @@ export default function Home() {
           <div className="col-span-5 flex h-80 w-full items-center rounded bg-secondary"></div>
         </div>
         <div className="mt-16 flex w-full items-center justify-start">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 2c3.309 0 6 2.691 6 6v8c0 3.309-2.691 6-6 6s-6-2.691-6-6v-8c0-3.309 2.691-6 6-6zm0-2c-4.418 0-8 3.582-8 8v8c0 4.418 3.582 8 8 8s8-3.582 8-8v-8c0-4.418-3.582-8-8-8zm0 9c-.829 0-1.5-.672-1.5-1.5s.671-1.5 1.5-1.5 1.5.672 1.5 1.5-.671 1.5-1.5 1.5z" />
-          </svg>
+          <img src="/images/scroll.svg" alt="navegue mais" />
           <span className="mx-2 text-gray-500">
             Navegue para conhecer mais.
           </span>
@@ -89,23 +81,25 @@ export default function Home() {
           </div>
           <div className="mx-auto mt-8">
             <div className="grid grid-cols-2 grid-rows-4 gap-4">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+              {servicos.map((servico) => (
                 <>
-                  <div className="col-span-1 rounded border border-gray-300 px-6 pb-4 pt-6 md:flex">
+                  <div
+                    className="col-span-1 rounded border border-gray-300 px-6 pb-4 pt-6 md:flex"
+                    key={servico.id}
+                  >
                     <div className="flex justify-center pt-1 md:w-1/3">
-                      <div className="flex h-16 w-16 items-center justify-center rounded bg-primary"></div>
+                      <div className="flex h-16 w-16 items-center justify-center rounded bg-primary text-accent-300">
+                        {servico.icone()}
+                      </div>
                     </div>
                     <div className="pl-6 md:flex-grow">
                       <div className="border-b border-b-accent pb-2">
                         <h3 className="text-xl font-semibold text-secondary">
-                          Nome do serviço
+                          {servico.titulo}
                         </h3>
                       </div>
                       <p className="mt-2 text-justify text-base leading-relaxed text-gray-700">
-                        Em decisão unânime, STF entendeu que o uso da tese
-                        contraria os princípios constitucionais. Em decisão
-                        unânime, STF entendeu que o uso da tese contraria os
-                        princípios constitucionais.
+                        {servico.descricao}
                       </p>
                       <div className="mt-6 flex justify-end">
                         <a
@@ -304,8 +298,8 @@ export default function Home() {
           {[1, 2, 3, 4, 5, 6].map((n) => (
             <>
               <div>
-                <Image
-                  src={ArticlePic}
+                <img
+                  src="/images/article-1.jpg"
                   alt="article"
                   className="aspect-[3/2] w-full rounded object-cover"
                 />
