@@ -8,10 +8,7 @@ type Servico = {
 type Parceiro = {
   imagem: string;
   nome: string;
-  sobrenome: string;
-  twitter: string;
-  instagram: string;
-  linkedin: string;
+  atuacao: string;
 };
 
 const servicos: Servico[] = [
@@ -70,6 +67,45 @@ const servicos: Servico[] = [
     descricao:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mollis sapien eu egestas rhoncus. Maecenas dignissim, elit et mattis gravida, lacus leo pulvinar nisl, id vulputate metus dolor at nulla.",
     icone: DivorcioSVG,
+  },
+];
+
+const parceiros: Parceiro[] = [
+  {
+    nome: "Nome sobrenome",
+    atuacao: "Área de atuação",
+    imagem:
+      "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    nome: "Nome sobrenome",
+    atuacao: "Área de atuação",
+    imagem:
+      "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    nome: "Nome sobrenome",
+    atuacao: "Área de atuação",
+    imagem:
+      "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    nome: "Nome sobrenome",
+    atuacao: "Área de atuação",
+    imagem:
+      "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    nome: "Nome sobrenome",
+    atuacao: "Área de atuação",
+    imagem:
+      "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    nome: "Nome sobrenome",
+    atuacao: "Área de atuação",
+    imagem:
+      "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 ];
 
@@ -233,4 +269,4 @@ function DivorcioSVG() {
   );
 }
 
-export default servicos;
+export { servicos, parceiros };

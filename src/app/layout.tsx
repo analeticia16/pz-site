@@ -27,7 +27,7 @@ export default function RootLayout({
               ></img>
             </Link>
             <ul className="flex items-center justify-end space-x-8 text-lg">
-              <li className="border-b-2 border-b-primary-800 px-4 py-2 font-bold text-gray-900">
+              <li className="px-4 py-2 font-bold text-gray-900">
                 <Link href="/">Início</Link>
               </li>
               <li className="px-4 py-2 text-gray-600 hover:text-accent-500">

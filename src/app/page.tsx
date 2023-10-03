@@ -1,17 +1,27 @@
 /* eslint-disable @next/next/no-img-element */
 import { Button, Tag, ContactForm } from "@/app/components";
-import servicos from "@/util/data";
+import { servicos, parceiros } from "@/util/data";
 
 export default function Home() {
   return (
     <>
+      {hero()}
+      {Servicos()}
+      {Parceiros()}
+      {Contato()}
+      {Blog()}
+    </>
+  );
+
+  function hero() {
+    return (
       <section className="container mb-16 flex min-h-[75vh] max-w-screen-xl grow flex-col items-center justify-center">
         <div className="mx-auto grid grid-cols-12 gap-16">
           <div className="col-span-7">
             <span className="rounded-lg bg-primary-50 px-3 py-1 text-xs font-semibold text-primary-900">
               Atendendo em Campinas e Região!
             </span>
-            <h1 className="leading mb-12 mt-4 text-5xl font-bold tracking-tight text-gray-900">
+            <h1 className="leading mb-12 mt-4 text-6xl font-bold tracking-tight text-gray-900">
               Está procurando uma advogada?
             </h1>
             <p className="mb-16 pr-16 text-xl font-normal text-gray-800">
@@ -49,35 +59,24 @@ export default function Home() {
           <i className="bx bx-down-arrow-alt"></i>
         </div>
       </section>
-      {Servicos()}
-      <br />
-      {Parceiros()}
-      <br />
-      {Contato()}
-      <br />
-      {Blog()}
-    </>
-  );
+    );
+  }
 
   function Servicos() {
     return (
       <>
         <section id="servicos">
-          <div className="mx-auto grid grid-cols-2 rounded-lg py-12">
-            <div className="col-span-1">
-              <Tag>Áreas de atuação</Tag>
-              <h2 className="mt-4 text-6xl text-gray-900">
-                Conheça nossos principais serviços jurídicos.
-              </h2>
-            </div>
-            <div className="col-span-1 flex items-center justify-center">
-              <p className="mt-8 text-base italic leading-relaxed text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                mollis sapien eu egestas rhoncus. Maecenas dignissim, elit et
-                mattis gravida, lacus leo pulvinar nisl, id vulputate metus
-                dolor at nulla.
-              </p>
-            </div>
+          <div className="mx-auto mt-16 max-w-screen-md py-12 text-center">
+            <Tag>Parceiros</Tag>
+            <h2 className="mt-4 text-6xl text-gray-900">
+              Conheça nossos principais serviços jurídicos.
+            </h2>
+            <p className="mt-8 text-base italic leading-relaxed text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              mollis sapien eu egestas rhoncus. Maecenas dignissim, elit et
+              mattis gravida, lacus leo pulvinar nisl, id vulputate metus dolor
+              at nulla.
+            </p>
           </div>
           <div className="mx-auto mt-8">
             <div className="grid grid-cols-2 grid-rows-4 gap-4">
@@ -143,19 +142,19 @@ export default function Home() {
           </p>
         </div>
         <div className="mt-8 grid grid-cols-3 grid-rows-2 gap-12">
-          {[1, 2, 3, 4, 5, 6].map((n) => (
+          {parceiros.map((parceiro) => (
             <>
               <div className="rounded bg-secondary-50 py-12">
                 <img
-                  src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                  alt="parceira"
+                  src={parceiro.imagem}
+                  alt={`parceiro ${parceiro.nome}`}
                   className="mx-auto h-64 w-64 rounded-full object-cover"
                 />
                 <h3 className="mt-6 text-center text-lg font-semibold text-gray-900">
-                  Nome Sobrenome
+                  {parceiro.nome}
                 </h3>
                 <p className="text-center text-base leading-relaxed text-slate-600">
-                  Função escritório
+                  {parceiro.atuacao}
                 </p>
                 <ul className="mt-6 flex items-center justify-center">
                   <li className="px-2 text-primary opacity-95">
