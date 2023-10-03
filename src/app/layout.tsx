@@ -34,7 +34,7 @@ export default function RootLayout({
                 Serviços
               </li>
               <li className="px-4 py-2 text-gray-600 hover:text-accent-500">
-                Artigos
+                <Link href="artigos">Artigos</Link>
               </li>
               <li className="px-4 py-2 text-gray-600 hover:text-accent-500">
                 <Link href="sobre">Sobre</Link>
