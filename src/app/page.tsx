@@ -320,7 +320,7 @@ export default function Home() {
                 </p>
                 <div className="mt-8 flex justify-end">
                   <a
-                    href="#"
+                    href="artigo"
                     className="flex items-center rounded px-4 py-2 uppercase text-gray-950 hover:bg-gray-300"
                   >
                     Leia mais

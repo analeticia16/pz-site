@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Button } from "./components";
 import Link from "next/link";
+import Navbar from "./components/navbar/navbar";
 
 export const metadata: Metadata = {
   title: "Pereira Zerger Advocacia",
@@ -17,36 +18,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="flex min-h-screen flex-col justify-between">
-        <nav>
-          <div className="container flex max-w-screen-lg items-center justify-between py-4">
-            <Link href="/">
-              <img
-                src="/images/sp-sem-bg.png"
-                alt="logo silvava"
-                className="h-auto w-20"
-              ></img>
-            </Link>
-            <ul className="flex items-center justify-end space-x-8 text-lg">
-              <li className="px-4 py-2 font-bold text-gray-900">
-                <Link href="/">Início</Link>
-              </li>
-              <li className="px-4 py-2 text-gray-600 hover:text-accent-500">
-                Serviços
-              </li>
-              <li className="px-4 py-2 text-gray-600 hover:text-accent-500">
-                <Link href="artigos">Artigos</Link>
-              </li>
-              <li className="px-4 py-2 text-gray-600 hover:text-accent-500">
-                <Link href="sobre">Sobre</Link>
-              </li>
-              <li className="py-2">
-                <a href="#">
-                  <Button>Contato</Button>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <Navbar />
         <main className="container max-w-screen-lg grow">{children}</main>
         <footer className="mt-16">
           <div className="container rounded bg-gray-900 px-16 pt-24">
